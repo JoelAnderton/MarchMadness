@@ -10,7 +10,7 @@ import random
 def march_madness(matches):
     round_winners = []
     for match in matches:
-        flips = [random.choice(['H', 'T']) for i in range(17)]
+        flips = [random.choice(['H', 'T']) for i in range(23)]
         #print(match)
         #print(flips)
         num_H = 0
@@ -26,7 +26,7 @@ def march_madness(matches):
                 #print('Winner is:', team1)
                 round_winners.append(team1)
                 break
-            if match[team2] == num_T:
+            elif match[team2] == num_T:
                 #print('Winner is:', team2)
                 round_winners.append(team2)
                 break
@@ -41,15 +41,23 @@ def march_madness(matches):
         continue
     return [round_winners, round_next]
 
+
+# West Matches
+first_four_west = [{'Rutgers': 11, 'Notre Dame': 11}]
 matches_west = [{'Gonzaga': 1, 'Gorgia St': 16},
                 {'Boise St': 8, 'Memphis': 9},
                 {'UConn': 5, 'New Mexico': 12},
                 {'Arkansas': 4, 'Vermont': 13},
-                {'Alabama': 6, 'Rutgers': 11},
+                {'Alabama': 6, **ff_west_winner},
                 {'Texas Tech': 3, 'Montan St':14},
-                {'Michigan St':7, 'Daivdson': 10},
-                {'Duke':2, 'Cal St Fullerton':15}]
+                {'Michigan St': 7, 'Daivdson': 10},
+                {'Duke': 2, 'Cal St Fullerton': 15}]
 
+# First Four West Match
+ff_west_winner = march_madness(first_four_west)
+print('First Four West - Winner')
+print(ff_west_winner[0][0])
+ff_west_winner = ff_west_winner[1][0]
 
 ## Round 1
 round_1_winners = march_madness(matches_west)
@@ -85,6 +93,9 @@ print()
 print('Round 5 - Final 4')
 for team in round_4_winners[0]:
     print(team)
+
+
+
 
 
 ## Round 1
