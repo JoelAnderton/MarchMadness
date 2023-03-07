@@ -1,7 +1,7 @@
 # MarchMadness
 Predicts a March Madness bracket based off the team's seed.
 
-Uses a weighted coin flip. It assigns one team to "heads" and other to "tails." Which ever team reaches their seed number first after 17 "flips" wins that bracket.
+Uses a weighted coin flip. It assigns one team to "heads" and other to "tails." Which ever team reaches their seed number first after 33 "flips" wins that bracket.
 Example: Duke (seed 2) vs. Texas Tech (seed 3)
 Duke = "Heads" (H)
 Texas Tech = "Tails" (T)
