@@ -42,6 +42,22 @@ def march_madness(matches):
     return [round_winners, round_next]
 
 
+def round2(round_1_winners):
+    round_2_matches = [{**round_1_winners[1][0], **round_1_winners[1][1]},
+                       {**round_1_winners[1][2], **round_1_winners[1][3]},
+                       {**round_1_winners[1][4], **round_1_winners[1][5]},
+                       {**round_1_winners[1][6], **round_1_winners[1][7]}]
+    return round_2_matches
+
+def round3(round_2_winners):
+    round_3_matches = [{**round_2_winners[1][0], **round_2_winners[1][1]},
+                       {**round_2_winners[1][2], **round_2_winners[1][3]}]
+    return round_3_matches
+
+def round4(round_3_winners):
+    round_4_matches = [{**round_3_winners[1][0], **round_3_winners[1][1]}]
+    return round_4_matches
+
 # West Matches
 first_four_west = [{'Rutgers': 11, 'Notre Dame': 11}]
 ff_west_winner = march_madness(first_four_west)
@@ -103,10 +119,7 @@ for team in round_1_winners[0]:
     print(team)
  
 ## Round 2
-round_2_matches = [{**round_1_winners[1][0], **round_1_winners[1][1]},
-                   {**round_1_winners[1][2], **round_1_winners[1][3]},
-                   {**round_1_winners[1][4], **round_1_winners[1][5]},
-                   {**round_1_winners[1][6], **round_1_winners[1][7]}]
+round_2_matches = round2(round_1_winners)
 round_2_winners = march_madness(round_2_matches)
 print()
 print('Round 3:')
@@ -114,8 +127,7 @@ for team in round_2_winners[0]:
     print(team)
 
 ## Round 3
-round_3_matches = [{**round_2_winners[1][0], **round_2_winners[1][1]},
-                   {**round_2_winners[1][2], **round_2_winners[1][3]}]
+round_3_matches = round3(round_2_winners)
 round_3_winners = march_madness(round_3_matches)
 print()
 print('Round 4 - Elite 8:')
@@ -123,7 +135,7 @@ for team in round_3_winners[0]:
     print(team)
     
 ## Round 4
-round_4_matches = [{**round_3_winners[1][0], **round_3_winners[1][1]}]
+round_4_matches = round4(round_3_winners)
 round_4_winners = march_madness(round_4_matches)
 print()
 print('Round 5 - Final 4:')
