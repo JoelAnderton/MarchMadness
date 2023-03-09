@@ -58,10 +58,11 @@ def round4(round_3_winners):
     round_4_matches = [{**round_3_winners[1][0], **round_3_winners[1][1]}]
     return round_4_matches
 
-def print_winners(winners):
+def print_winners(region, winners):
+    print(region)
     for team in winners[0]:
         print(team)
-
+    print()
 
 # West Matches
 first_four_west = [{'Rutgers': 11, 'Notre Dame': 11}]
@@ -120,26 +121,26 @@ print('Midwest -',ff_mw_winner[0][0])
 round_1_winners = march_madness(matches_west)
 print()
 print('Round 2:')
-print_winners(round_1_winners)
+print_winners('West', round_1_winners)
  
 ## Round 2
 round_2_matches = round2(round_1_winners)
 round_2_winners = march_madness(round_2_matches)
 print()
 print('Round 3:')
-print_winners(round_2_winners)
+print_winners('West', round_2_winners)
 
 ## Round 3
 round_3_matches = round3(round_2_winners)
 round_3_winners = march_madness(round_3_matches)
 print()
 print('Round 4 - Elite 8:')
-print_winners(round_3_winners)
+print_winners('West', round_3_winners)
     
 ## Round 4
 round_4_matches = round4(round_3_winners)
 round_4_winners = march_madness(round_4_matches)
 print()
 print('Round 5 - Final 4:')
-print_winners(round_4_winners)
+print_winners('West', round_4_winners)
 
