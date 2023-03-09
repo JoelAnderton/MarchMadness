@@ -2,7 +2,7 @@
 # Created by: Joel Anderton
 # Created date: 3/2/2023
 #
-# Purpose: to randomly pick the March Madness bracket for all 67 games
+# Purpose: uses a weighted coin flip to pick the March Madness bracket for all 67 games
 #########################################################################
 import random
 
