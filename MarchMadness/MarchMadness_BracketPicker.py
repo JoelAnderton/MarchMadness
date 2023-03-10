@@ -109,16 +109,16 @@ while stop_final_four <= 6:
                   {'San Diego St.': 8, 'Creighton': 9},
                   {'Iowa': 5, 'Richmond': 12},
                   {'Providence': 4, 'South Dakota St.': 13},
-                  {'LSU': 6,'Iowa St.': 11},
+                  {'LSU': 6, 'Iowa St.': 11},
                   {'Wisconsin': 3, 'Colgate':14},
                   {'USC': 7, 'Miami': 10},
                   {'Auburn': 2, 'Jacksonville St.': 15}]
 
     print('First Four - Winners:')
     print('West -', ff_west_winner[0][0])
-    print('East -',ff_east_winner[0][0])
-    print('South -',ff_south_winner[0][0])
-    print('Midwest -',ff_mw_winner[0][0])
+    print('East -', ff_east_winner[0][0])
+    print('South -', ff_south_winner[0][0])
+    print('Midwest -', ff_mw_winner[0][0])
 
 
     ## Round 1
