@@ -32,10 +32,10 @@ def march_madness(matches):
                 break
 
     round_next = []
-    for round in round_winners:
+    for team in round_winners:
         #print(round)
         for match in matches:
-            round_next.append({round : match[round]})
+            round_next.append({team: match[team]})
             matches.pop(0)
             break
         continue
