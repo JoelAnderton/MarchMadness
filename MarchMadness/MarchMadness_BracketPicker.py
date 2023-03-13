@@ -133,7 +133,7 @@ while stop_final_four < 12:
     round_1_winners_mw = march_madness(matches_mw)
 
     # Check for at least one 5 seed vs. 12 seed upset
-    if  round_1_winners_west[0][2] == 'New Mexico' or  round_1_winners_east[0][2] == ff_east_winner[0][0] or round_1_winners_south[0][2] == 'UAB' or round_1_winners_mw[0][2] == 'Richmond':
+    if  round_1_winners_west[0][2] == 'VCU' or  round_1_winners_east[0][2] == 'Oral Roberts' or round_1_winners_south[0][2] == 'Charleston' or round_1_winners_mw[0][2] == 'Drake':
         print()
         print('Round 2:')
         print_winners('West', round_1_winners_west)
@@ -195,6 +195,22 @@ while stop_final_four < 12:
                                round_4_winners_east[1][0][round_4_winners_east[0][0]] +
                                round_4_winners_south[1][0][round_4_winners_south[0][0]] +
                                round_4_winners_mw[1][0][round_4_winners_mw[0][0]])
+
+        ## Round 5 - Semifinals
+        round5_matches_left = round4([[round_4_winners_south[0][0], round_4_winners_east[0][0]], [round_4_winners_south[1][0], round_4_winners_east[1][0]]])
+        round5_winners_left = march_madness(round5_matches_left)
+        round5_matches_right = round4([[round_4_winners_mw[0][0], round_4_winners_west[0][0]], [round_4_winners_mw[1][0], round_4_winners_west[1][0]]])      
+        round5_winners_right = march_madness(round5_matches_right)
+        print()
+        print('Round 6 - Semi-Finals:')
+        print_winners('Left', round5_winners_left)
+        print_winners('Right', round5_winners_right)
+
+        # Round 6 - Final
+        print('Round 7 - Finals:')
+        round6_match = round4([[round5_winners_left[0][0], round5_winners_right[0][0]], [round5_winners_left[1][0], round5_winners_right[1][0]]])
+        round6_winner = march_madness(round6_match)
+        print_winners('WINNER!!', round6_winner)
 
 print('Done!')
 print('Sum of Final Four Seeds:', stop_final_four)
