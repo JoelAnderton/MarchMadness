@@ -70,7 +70,7 @@ def print_winners(region, winners):
 
 stop_final_four = 0
 count = 0
-while stop_final_four <= 12:
+while stop_final_four < 12:
     count += 1
     # West Matches
     first_four_west = [{'Rutgers': 11, 'Notre Dame': 11}]
