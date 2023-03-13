@@ -49,14 +49,17 @@ def round2(round_1_winners):
                        {**round_1_winners[1][6], **round_1_winners[1][7]}]
     return round_2_matches
 
+
 def round3(round_2_winners):
     round_3_matches = [{**round_2_winners[1][0], **round_2_winners[1][1]},
                        {**round_2_winners[1][2], **round_2_winners[1][3]}]
     return round_3_matches
 
+
 def round4(round_3_winners):
     round_4_matches = [{**round_3_winners[1][0], **round_3_winners[1][1]}]
     return round_4_matches
+
 
 def print_winners(region, winners):
     print(region)
@@ -66,7 +69,7 @@ def print_winners(region, winners):
 
 
 stop_final_four = 0
-while stop_final_four <= 1:
+while stop_final_four <= 12:
     # West Matches
     first_four_west = [{'Rutgers': 11, 'Notre Dame': 11}]
     ff_west_winner = march_madness(first_four_west)
@@ -187,8 +190,8 @@ while stop_final_four <= 1:
         # check that at least 1 team in the Final Four is a 1 seed and that the total of the Final Four seeds >=12
         if round_4_winners_west[1][0][round_4_winners_west[0][0]] == 1 or round_4_winners_east[1][0][round_4_winners_east[0][0]] == 1 or round_4_winners_south[1][0][round_4_winners_south[0][0]] == 1 or round_4_winners_mw[1][0][round_4_winners_mw[0][0]] == 1:
             stop_final_four = (round_4_winners_west[1][0][round_4_winners_west[0][0]] +
-                                    round_4_winners_east[1][0][round_4_winners_east[0][0]] +
-                                    round_4_winners_south[1][0][round_4_winners_south[0][0]] +
-                                    round_4_winners_mw[1][0][round_4_winners_mw[0][0]])
+                               round_4_winners_east[1][0][round_4_winners_east[0][0]] +
+                               round_4_winners_south[1][0][round_4_winners_south[0][0]] +
+                               round_4_winners_mw[1][0][round_4_winners_mw[0][0]])
 
 print('Done!', stop_final_four)
