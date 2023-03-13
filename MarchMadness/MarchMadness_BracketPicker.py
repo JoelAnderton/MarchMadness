@@ -3,6 +3,11 @@
 # Created date: 3/2/2023
 #
 # Purpose: uses a weighted coin flip to pick the March Madness bracket for all 67 games
+#
+# - Checks:
+#    - Must have at least one 5 seed vs. 12 seed upset
+#    - Must have at least one 1 seed in the Final Four
+#    - The sum of the seeds in the Final Four must be >= 12
 #######################################################################################
 import random
 
