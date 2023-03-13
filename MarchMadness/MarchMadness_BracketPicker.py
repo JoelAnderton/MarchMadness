@@ -69,7 +69,9 @@ def print_winners(region, winners):
 
 
 stop_final_four = 0
+count = 0
 while stop_final_four <= 12:
+    count += 1
     # West Matches
     first_four_west = [{'Rutgers': 11, 'Notre Dame': 11}]
     ff_west_winner = march_madness(first_four_west)
@@ -194,4 +196,6 @@ while stop_final_four <= 12:
                                round_4_winners_south[1][0][round_4_winners_south[0][0]] +
                                round_4_winners_mw[1][0][round_4_winners_mw[0][0]])
 
-print('Done!', stop_final_four)
+print('Done!')
+print('Sum of Final Four Seeds:', stop_final_four)
+print('Number of interations:', count)
