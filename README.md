@@ -17,3 +17,8 @@ Flips:
 Winner is: Texas Tech
 
 The winner is Texas Tech because in the first 4 flips there are 3 "T's" and only 1 "H's". Therefore, it is predicted that Texas Tech will upset Duke.
+
+The program ensures the following attributes about the bracket:
+- Must have at least one 5 seed vs. 12 seed upset
+- Must have at least one 1 seed in the Final Four
+- The sum of the seeds in the Final Four must be >= 12
