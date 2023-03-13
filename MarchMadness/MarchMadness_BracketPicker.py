@@ -1,9 +1,9 @@
-#########################################################################
+######################################################################################
 # Created by: Joel Anderton
 # Created date: 3/2/2023
 #
 # Purpose: uses a weighted coin flip to pick the March Madness bracket for all 67 games
-#########################################################################
+#######################################################################################
 import random
 
 ### Weighted Coin Flip
@@ -73,51 +73,51 @@ count = 0
 while stop_final_four < 12:
     count += 1
     # West Matches
-    first_four_west = [{'Rutgers': 11, 'Notre Dame': 11}]
+    first_four_west = [{'Arisona St.': 11, 'Nevada': 11}]
     ff_west_winner = march_madness(first_four_west)
-    matches_west = [{'Gonzaga': 1, 'Gorgia St.': 16},
-                    {'Boise St.': 8, 'Memphis': 9},
-                    {'UConn': 5, 'New Mexico': 12},
-                    {'Arkansas': 4, 'Vermont': 13},
-                    {'Alabama': 6, **ff_west_winner[1][0]},
-                    {'Texas Tech': 3, 'Montan St.':14},
-                    {'Michigan St': 7, 'Daivdson': 10},
-                    {'Duke': 2, 'Cal St Fullerton': 15}]
+    matches_west = [{'Kanasas': 1, 'Howard': 16},
+                    {'Arkansas': 8, 'Illinois': 9},
+                    {'St. Marys': 5, 'VCU': 12},
+                    {'UConn': 4, 'Iona': 13},
+                    {'TCU': 6, **ff_west_winner[1][0]},
+                    {'Gonzaga': 3, 'Grand Canyon':14},
+                    {'Northwestern': 7, 'Boise St.': 10},
+                    {'UCLA': 2, 'UNC Asheville': 15}]
 
     # East Matches
-    first_four_east = [{'Wyoming': 12, 'Indiana': 12}]
+    first_four_east = [{'Texas Southern': 16, 'F. Dickinson': 16}]
     ff_east_winner = march_madness(first_four_east)
-    matches_east = [{'Baylor': 1, 'Norfolk': 16},
-                    {'North Carolina': 8, 'Marquette': 9},
-                    {'St. Marys': 5, **ff_east_winner[1][0]},
-                    {'UCLA': 4, 'Akron': 13},
-                    {'Texas': 6, 'Virginia Tech': 11},
-                    {'Purdue': 3, 'Yale':14},
-                    {'Murray St.': 7, 'San Francisco': 10},
-                    {'Kentucky': 2, 'St. Peters': 15}]
+    matches_east = [{'Purdue': 1, **ff_east_winner[1][0]},
+                    {'Memphish': 8, 'Florida Atlantic': 9},
+                    {'Duke': 5, 'Oral Roberts': 12},
+                    {'Tennessee': 4, 'Louisiana': 13},
+                    {'Kentucky': 6, 'Providence': 11},
+                    {'Kansas St.': 3, 'Montana St.':14},
+                    {'Michigan St.': 7, 'USC': 10},
+                    {'Marquette': 2, 'Vermont': 15}]
     # South Matches
-    first_four_south = [{'Wright St.': 16, 'Bryant': 16}]
+    first_four_south = [{'Texas A&M-CC': 16, 'SE Missouri St.': 16}]
     ff_south_winner = march_madness(first_four_south)
-    matches_south = [{'Arizona': 1, **ff_south_winner[1][0]},
-                     {'Seton Hall': 8, 'TCU': 9},
-                     {'Huston': 5, 'UAB': 12},
-                     {'Illinois': 4, 'Chattanooga': 13},
-                     {'Colorado St.': 6, 'Michigan': 11},
-                     {'Tennessee': 3, 'Longwood':14},
-                     {'Ohio St': 7, 'Loyola': 10},
-                     {'Villanova': 2, 'Delaware': 15}]
+    matches_south = [{'Alabama': 1, **ff_south_winner[1][0]},
+                     {'Maryland': 8, 'West Virginia': 9},
+                     {'San Diego St.': 5, 'Charleston': 12},
+                     {'Virginia': 4, 'Furman': 13},
+                     {'Creighton': 6, 'NC State': 11},
+                     {'Baylor': 3, 'UCSB':14},
+                     {'Missouri': 7, 'Utah St.': 10},
+                     {'Arizona': 2, 'Princeton': 15}]
 
     # Midwest Matches
-    first_four_mw = [{'Texas Southern': 16, 'Texas A&M': 16}]
+    first_four_mw = [{'Mississippi St.': 11, 'Pittsburgh': 11}]
     ff_mw_winner = march_madness(first_four_mw)
-    matches_mw = [{'Kansas': 1, **ff_mw_winner[1][0]},
-                  {'San Diego St.': 8, 'Creighton': 9},
-                  {'Iowa': 5, 'Richmond': 12},
-                  {'Providence': 4, 'South Dakota St.': 13},
-                  {'LSU': 6, 'Iowa St.': 11},
-                  {'Wisconsin': 3, 'Colgate':14},
-                  {'USC': 7, 'Miami': 10},
-                  {'Auburn': 2, 'Jacksonville St.': 15}]
+    matches_mw = [{'Houston': 1, 'Northern Ky.': 16},
+                  {'Iowa': 8, 'Auburn': 9},
+                  {'Miami': 5, 'Drake': 12},
+                  {'Indiana': 4, 'Kent St.': 13},
+                  {'Iowa St.': 6, **ff_mw_winner[1][0]},
+                  {'Xavier': 3, 'Kennesaw St.':14},
+                  {'Texas A&M': 7, 'Penn St.': 10},
+                  {'Texas': 2, 'Colgate': 15}]
 
     print('First Four - Winners:')
     print('West -', ff_west_winner[0][0])
