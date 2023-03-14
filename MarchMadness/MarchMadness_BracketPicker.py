@@ -78,9 +78,9 @@ count = 0
 while stop_final_four < 12:
     count += 1
     # West Matches
-    first_four_west = [{'Arisona St.': 11, 'Nevada': 11}]
+    first_four_west = [{'Arizona St.': 11, 'Nevada': 11}]
     ff_west_winner = march_madness(first_four_west)
-    matches_west = [{'Kanasas': 1, 'Howard': 16},
+    matches_west = [{'Kansas': 1, 'Howard': 16},
                     {'Arkansas': 8, 'Illinois': 9},
                     {'St. Marys': 5, 'VCU': 12},
                     {'UConn': 4, 'Iona': 13},
@@ -93,7 +93,7 @@ while stop_final_four < 12:
     first_four_east = [{'Texas Southern': 16, 'F. Dickinson': 16}]
     ff_east_winner = march_madness(first_four_east)
     matches_east = [{'Purdue': 1, **ff_east_winner[1][0]},
-                    {'Memphish': 8, 'Florida Atlantic': 9},
+                    {'Memphis': 8, 'Florida Atlantic': 9},
                     {'Duke': 5, 'Oral Roberts': 12},
                     {'Tennessee': 4, 'Louisiana': 13},
                     {'Kentucky': 6, 'Providence': 11},
@@ -108,7 +108,7 @@ while stop_final_four < 12:
                      {'San Diego St.': 5, 'Charleston': 12},
                      {'Virginia': 4, 'Furman': 13},
                      {'Creighton': 6, 'NC State': 11},
-                     {'Baylor': 3, 'UCSB':14},
+                     {'Baylor': 3, 'UCSB': 14},
                      {'Missouri': 7, 'Utah St.': 10},
                      {'Arizona': 2, 'Princeton': 15}]
 
@@ -120,7 +120,7 @@ while stop_final_four < 12:
                   {'Miami': 5, 'Drake': 12},
                   {'Indiana': 4, 'Kent St.': 13},
                   {'Iowa St.': 6, **ff_mw_winner[1][0]},
-                  {'Xavier': 3, 'Kennesaw St.':14},
+                  {'Xavier': 3, 'Kennesaw St.': 14},
                   {'Texas A&M': 7, 'Penn St.': 10},
                   {'Texas': 2, 'Colgate': 15}]
 
