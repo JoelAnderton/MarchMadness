@@ -33,3 +33,8 @@ The program ensures the following attributes about the bracket:
 - Highlighted teams are predicted winners of the First Four.
 
 <img src="images/MarchMadness_2023.PNG" width="800">
+
+# What I Learned
+* How to do a weighted coin flip.
+* Using "**" to unpack a dictionary.
+* Loop through a list of dictionaries and pop() off the winners from the losers.
