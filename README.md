@@ -1,5 +1,5 @@
 # MarchMadness
-Predicts a March Madness bracket based off the team's seed and a weighted coin flip.
+Creates a March Madness bracket based off the team's seed and a weighted coin flip.
 
 My weighted coin flip works like this: It assigns one team to "heads" and other to "tails." Which ever team reaches their seed number first wins that bracket.
 
