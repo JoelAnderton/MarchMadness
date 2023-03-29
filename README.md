@@ -12,7 +12,7 @@ Duke = "Heads" (H)
 Texas Tech = "Tails" (T)
 
 Flips:
-'H', 'T', 'T', 'T', 'T', 'H', 'T', 'H', 'H', 'T', 'H', 'T', 'T', 'T', 'H', 'T', 'T'
+'H', 'T', 'T', 'T', 'H', 'T', 'T', 'T', 'H', 'H', 'H', 'T', 'H', 'T', 'H', 'T', 'T'
 
 Winner is: Texas Tech
 
