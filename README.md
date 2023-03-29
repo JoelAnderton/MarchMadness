@@ -22,3 +22,4 @@ The program ensures the following attributes about the bracket:
 - Must have at least one 5 seed vs. 12 seed upset
 - Must have at least one 1 seed in the Final Four
 - The sum of the seeds in the Final Four must be >= 12
+<img src="images/MarchMadness_2023.PNG" width="800">
