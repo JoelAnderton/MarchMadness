@@ -22,4 +22,16 @@ The program ensures the following attributes about the bracket:
 - Must have at least one 5 seed vs. 12 seed upset
 - Must have at least one 1 seed in the Final Four
 - The sum of the seeds in the Final Four must be >= 12
+
+### Example of output:
+
+<img src="images/Output_example.PNG" width="200">
+
+### March Madness 2023 Bracket Results
+Red X's are where the program guessed wrong.
+
+Red text are expected upsets.
+
+Highlighted teams are predicted winners of the First Four.
+
 <img src="images/MarchMadness_2023.PNG" width="800">
