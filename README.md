@@ -28,10 +28,8 @@ The program ensures the following attributes about the bracket:
 <img src="images/Output_example.PNG" width="200">
 
 ### March Madness 2023 Bracket Results
-Red X's are where the program guessed wrong.
-
-Red text are expected upsets.
-
-Highlighted teams are predicted winners of the First Four.
+- Red X's are where the program guessed wrong.
+- Red text are expected upsets.
+- Highlighted teams are predicted winners of the First Four.
 
 <img src="images/MarchMadness_2023.PNG" width="800">
