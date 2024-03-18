@@ -78,16 +78,16 @@ count = 0
 while stop_final_four < 12:
     count += 1
     # West Matches
-    first_four_west = [{'Arizona St.': 11, 'Nevada': 11}]
+    first_four_west = [{'Howard': 16, 'Wagner': 16}]
     ff_west_winner = march_madness(first_four_west)
-    matches_west = [{'Kansas': 1, 'Howard': 16},
-                    {'Arkansas': 8, 'Illinois': 9},
-                    {'St. Marys': 5, 'VCU': 12},
-                    {'UConn': 4, 'Iona': 13},
-                    {'TCU': 6, **ff_west_winner[1][0]},
-                    {'Gonzaga': 3, 'Grand Canyon':14},
-                    {'Northwestern': 7, 'Boise St.': 10},
-                    {'UCLA': 2, 'UNC Asheville': 15}]
+    matches_west = [{'North Carolina': 1, **ff_west_winner[1][0]},
+                    {'Mississippi St.': 8, 'Michigan St.': 9},
+                    {'St. Marys': 5, 'Grand Canyon': 12},
+                    {'Alabama': 4, 'Charleston': 13},
+                    {'Clemson': 6, 'New Mexico': 11},
+                    {'Baylor': 3, 'Colgate':14},
+                    {'Dayton': 7, 'Nevada': 10},
+                    {'Arizona': 2, 'Long Beach St.': 15}]
 
     # East Matches
     first_four_east = [{'Texas Southern': 16, 'F. Dickinson': 16}]
