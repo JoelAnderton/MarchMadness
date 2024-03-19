@@ -15,7 +15,7 @@ import random
 def march_madness(matches):
     round_winners = []
     for match in matches:
-        flips = [random.choice(['H', 'T']) for i in range(33)]
+        flips = [random.choice(['H', 'T']) for i in range(37)]
         #print(match)
         #print(flips)
         num_H = 0
@@ -90,46 +90,48 @@ while stop_final_four < 12:
                     {'Arizona': 2, 'Long Beach St.': 15}]
 
     # East Matches
-    first_four_east = [{'Texas Southern': 16, 'F. Dickinson': 16}]
-    ff_east_winner = march_madness(first_four_east)
-    matches_east = [{'Purdue': 1, **ff_east_winner[1][0]},
-                    {'Memphis': 8, 'Florida Atlantic': 9},
-                    {'Duke': 5, 'Oral Roberts': 12},
-                    {'Tennessee': 4, 'Louisiana': 13},
-                    {'Kentucky': 6, 'Providence': 11},
-                    {'Kansas St.': 3, 'Montana St.':14},
-                    {'Michigan St.': 7, 'USC': 10},
-                    {'Marquette': 2, 'Vermont': 15}]
+    #first_four_east = [{'Texas Southern': 16, 'F. Dickinson': 16}]
+    #ff_east_winner = march_madness(first_four_east) -- not needed in 2024
+    matches_east = [{'UConn': 1, 'Stetson':16},
+                    {'Florida Atlantic': 8, 'Northwestern': 9},
+                    {'San Diego St.': 5, 'UAB': 12},
+                    {'Auburn': 4, 'Yale': 13},
+                    {'BYU': 6, 'Duquesene': 11},
+                    {'Illinois': 3, 'Morehead St.':14},
+                    {'Washington St.': 7, 'Drake': 10},
+                    {'Iowa St.': 2, 'South Dakota St.': 15}]
     # South Matches
-    first_four_south = [{'Texas A&M-CC': 16, 'SE Missouri St.': 16}]
+    first_four_south = [{'Boise St.': 10, 'Colorado': 10}]
     ff_south_winner = march_madness(first_four_south)
-    matches_south = [{'Alabama': 1, **ff_south_winner[1][0]},
-                     {'Maryland': 8, 'West Virginia': 9},
-                     {'San Diego St.': 5, 'Charleston': 12},
-                     {'Virginia': 4, 'Furman': 13},
-                     {'Creighton': 6, 'NC State': 11},
-                     {'Baylor': 3, 'UCSB': 14},
-                     {'Missouri': 7, 'Utah St.': 10},
-                     {'Arizona': 2, 'Princeton': 15}]
+    matches_south = [{'Houston': 1, 'Longwood': 16},
+                     {'Nebraska': 8, 'Texas A&M': 9},
+                     {'Wisconsin': 5, 'James Madison': 12},
+                     {'Duke': 4, 'Vermont': 13},
+                     {'Texas Tech': 6, 'NC State': 11},
+                     {'Kentucky': 3, 'Oakland': 14},
+                     {'Florida': 7, **ff_south_winner[1][0]},
+                     {'Marquette': 2, 'Western Kentucky': 15}]
 
     # Midwest Matches
-    first_four_mw = [{'Mississippi St.': 11, 'Pittsburgh': 11}]
-    ff_mw_winner = march_madness(first_four_mw)
-    matches_mw = [{'Houston': 1, 'Northern Ky.': 16},
-                  {'Iowa': 8, 'Auburn': 9},
-                  {'Miami': 5, 'Drake': 12},
-                  {'Indiana': 4, 'Kent St.': 13},
-                  {'Iowa St.': 6, **ff_mw_winner[1][0]},
-                  {'Xavier': 3, 'Kennesaw St.': 14},
-                  {'Texas A&M': 7, 'Penn St.': 10},
-                  {'Texas': 2, 'Colgate': 15}]
+    first_four_mw1 = [{'Virginia': 10, 'Colorado St': 10}]
+    ff_mw_winner1 = march_madness(first_four_mw1)
+    first_four_mw2 = [{'Montana St.': 16, 'Grambling': 16}]
+    ff_mw_winner2 = march_madness(first_four_mw2)
+    matches_mw = [{'Purdue': 1, **ff_mw_winner2[1][0]},
+                  {'Utah St.': 8, 'TCU': 9},
+                  {'Gonzaga': 5, 'McNeese': 12},
+                  {'Kansas': 4, 'Samford': 13},
+                  {'South Carolina': 6, 'Oregon': 11},
+                  {'Creighton': 3, 'Akron': 14},
+                  {'Texas': 7, **ff_mw_winner1[1][0]},
+                  {'Tennessee': 2, 'St. Peters': 15}]
 
     print('First Four - Winners:')
     print('West -', ff_west_winner[0][0])
-    print('East -', ff_east_winner[0][0])
+  # print('East -', ff_east_winner[0][0]) -- not need in 2024
     print('South -', ff_south_winner[0][0])
-    print('Midwest -', ff_mw_winner[0][0])
-
+    print('Midwest 10 seed -', ff_mw_winner1[0][0])
+    print('Midwest 16 seed -', ff_mw_winner2[0][0])
 
     ## Round 1
     round_1_winners_west = march_madness(matches_west)
@@ -138,7 +140,7 @@ while stop_final_four < 12:
     round_1_winners_mw = march_madness(matches_mw)
 
     # Check for at least one 5 seed vs. 12 seed upset
-    if  round_1_winners_west[0][2] == 'VCU' or  round_1_winners_east[0][2] == 'Oral Roberts' or round_1_winners_south[0][2] == 'Charleston' or round_1_winners_mw[0][2] == 'Drake':
+    if  round_1_winners_west[0][2] == 'Grand Canyon' or  round_1_winners_east[0][2] == 'UAB' or round_1_winners_south[0][2] == 'James Madison' or round_1_winners_mw[0][2] == 'McNeese':
         print()
         print('Round 2:')
         print_winners('West', round_1_winners_west)
