@@ -204,9 +204,9 @@ while stop_final_four < 12:
                                round_4_winners_mw[1][0][round_4_winners_mw[0][0]])
 
         ## Round 5 - Semifinals
-        round5_matches_left = round4([[round_4_winners_south[0][0], round_4_winners_east[0][0]], [round_4_winners_south[1][0], round_4_winners_east[1][0]]])
+        round5_matches_left = round4([[round_4_winners_west[0][0], round_4_winners_east[0][0]], [round_4_winners_west[1][0], round_4_winners_east[1][0]]])
         round5_winners_left = march_madness(round5_matches_left)
-        round5_matches_right = round4([[round_4_winners_mw[0][0], round_4_winners_west[0][0]], [round_4_winners_mw[1][0], round_4_winners_west[1][0]]])      
+        round5_matches_right = round4([[round_4_winners_mw[0][0], round_4_winners_south[0][0]], [round_4_winners_mw[1][0], round_4_winners_south[1][0]]])      
         round5_winners_right = march_madness(round5_matches_right)
         print()
         print('Round 6 - Semi-Finals:')
