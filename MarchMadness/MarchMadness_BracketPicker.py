@@ -78,60 +78,60 @@ count = 0
 while stop_final_four < 12:
     count += 1
     # West Matches
-    first_four_west = [{'Howard': 16, 'Wagner': 16}]
-    ff_west_winner = march_madness(first_four_west)
-    matches_west = [{'North Carolina': 1, **ff_west_winner[1][0]},
-                    {'Mississippi St.': 8, 'Michigan St.': 9},
-                    {'St. Marys': 5, 'Grand Canyon': 12},
-                    {'Alabama': 4, 'Charleston': 13},
-                    {'Clemson': 6, 'New Mexico': 11},
-                    {'Baylor': 3, 'Colgate':14},
-                    {'Dayton': 7, 'Nevada': 10},
-                    {'Arizona': 2, 'Long Beach St.': 15}]
+    # first_four_west = [{'Al': 16, 'Wagner': 16}]
+    # ff_west_winner = march_madness(first_four_west)
+    matches_west = [{'Florida': 1, 'Norfolk St.': 16},
+                    {'UConn': 8, 'Oklahoma': 9},
+                    {'Memphis': 5, 'Colorado St.': 12},
+                    {'Maryland': 4, 'Grand Canyon': 13},
+                    {'Missouri': 6, 'Drake': 11},
+                    {'Texas Tech': 3, 'UNC Wilmigton':14},
+                    {'Kansas': 7, 'Arkansas': 10},
+                    {'St. John': 2, 'Omaha': 15}]
 
     # East Matches
-    #first_four_east = [{'Texas Southern': 16, 'F. Dickinson': 16}]
-    #ff_east_winner = march_madness(first_four_east) -- not needed in 2024
-    matches_east = [{'UConn': 1, 'Stetson':16},
-                    {'Florida Atlantic': 8, 'Northwestern': 9},
-                    {'San Diego St.': 5, 'UAB': 12},
-                    {'Auburn': 4, 'Yale': 13},
-                    {'BYU': 6, 'Duquesene': 11},
-                    {'Illinois': 3, 'Morehead St.':14},
-                    {'Washington St.': 7, 'Drake': 10},
-                    {'Iowa St.': 2, 'South Dakota St.': 15}]
+    first_four_east = [{'American': 16, 'Mt. St.Marys': 16}]
+    ff_east_winner = march_madness(first_four_east)  
+    matches_east = [{'Duke': 1, **ff_east_winner[1][0]},
+                    {'Mississippi St.': 8, 'Baylor': 9},
+                    {'Oregon': 5, 'Liberty': 12},
+                    {'Arizona': 4, 'Akron': 13},
+                    {'BYU': 6, 'VCU': 11},
+                    {'Wisconsin': 3, 'Montana':14},
+                    {'St. Marys': 7, 'Vanderbil': 10},
+                    {'Alabama': 2, 'Robert Morris': 15}]
     # South Matches
-    first_four_south = [{'Boise St.': 10, 'Colorado': 10}]
-    ff_south_winner = march_madness(first_four_south)
-    matches_south = [{'Houston': 1, 'Longwood': 16},
-                     {'Nebraska': 8, 'Texas A&M': 9},
-                     {'Wisconsin': 5, 'James Madison': 12},
-                     {'Duke': 4, 'Vermont': 13},
-                     {'Texas Tech': 6, 'NC State': 11},
-                     {'Kentucky': 3, 'Oakland': 14},
-                     {'Florida': 7, **ff_south_winner[1][0]},
-                     {'Marquette': 2, 'Western Kentucky': 15}]
+    # first_four_south = [{'Alabama St.': 10, 'St. Franscis': 10}] --  not needed in 2025
+    # ff_south_winner = march_madness(first_four_south)
+    matches_south = [{'Auburn': 1, 'Alabama St.': 16},
+                     {'Lousiville': 8, 'Creighton': 9},
+                     {'Michigan': 5, 'UC San Diego': 12},
+                     {'Texas A&M': 4, 'Yale': 13},
+                     {'Ole Mills': 6, 'North Caroloina': 11},
+                     {'Iowa St.': 3, 'Lipscomb': 14},
+                     {'Marquette': 7, 'New Mexico': 10},
+                     {'Michigan St.': 2, 'Bryant': 15}]
 
     # Midwest Matches
-    first_four_mw1 = [{'Virginia': 10, 'Colorado St': 10}]
+    first_four_mw1 = [{'Texans': 11, 'Xavier': 11}]
     ff_mw_winner1 = march_madness(first_four_mw1)
-    first_four_mw2 = [{'Montana St.': 16, 'Grambling': 16}]
-    ff_mw_winner2 = march_madness(first_four_mw2)
-    matches_mw = [{'Purdue': 1, **ff_mw_winner2[1][0]},
-                  {'Utah St.': 8, 'TCU': 9},
-                  {'Gonzaga': 5, 'McNeese': 12},
-                  {'Kansas': 4, 'Samford': 13},
-                  {'South Carolina': 6, 'Oregon': 11},
-                  {'Creighton': 3, 'Akron': 14},
-                  {'Texas': 7, **ff_mw_winner1[1][0]},
-                  {'Tennessee': 2, 'St. Peters': 15}]
+    # first_four_mw2 = [{'Montana St.': 16, 'Grambling': 16}] --  not needed in 2025
+    # ff_mw_winner2 = march_madness(first_four_mw2)
+    matches_mw = [{'Houston': 1, 'SIU Edwardsvill': 16 },
+                  {'Gonzaga': 8, 'Georgia': 9},
+                  {'Clemson': 5, 'McNeese': 12},
+                  {'Purdue': 4, 'High Point': 13},
+                  {'Illinois': 6, **ff_mw_winner1[1][0]},
+                  {'Kentucky': 3, 'Troy': 14},
+                  {'UCLA': 7, 'Utah St.': 10 },
+                  {'Tennessee': 2, 'Wofford': 15}]
 
     print('First Four - Winners:')
-    print('West -', ff_west_winner[0][0])
-  # print('East -', ff_east_winner[0][0]) -- not need in 2024
-    print('South -', ff_south_winner[0][0])
-    print('Midwest 10 seed -', ff_mw_winner1[0][0])
-    print('Midwest 16 seed -', ff_mw_winner2[0][0])
+    # print('West -', ff_west_winner[0][0])  -- not needed in 2025
+    print('East -', ff_east_winner[0][0]) 
+    # print('South -', ff_south_winner[0][0]) -- not needed in 2025
+    print('Midwest -', ff_mw_winner1[0][0])
+    # print('Midwest 16 seed -', ff_mw_winner2[0][0]) -- not needed in 2025
 
     ## Round 1
     round_1_winners_west = march_madness(matches_west)
